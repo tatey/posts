@@ -1,18 +1,21 @@
 class NewPostViewController < UITableViewController
   attr_accessor :delegate
 
-  attr_accessor :cancelButton
-  attr_accessor :saveButton
-
   def viewDidLoad
     super
-    @saveButton = navigationItem.leftBarButtonItem
-    @cancelButton = navigationItem.rightBarButtonItem
-    @cancelButton.target = self
-    @cancelButton.action = 'cancelButtonDidGetTouched:'
+    cancelButton.target = self
+    cancelButton.action = 'cancelButtonDidGetTouched:'
+  end
+
+  def cancelButton
+    navigationItem.rightBarButtonItem
+  end
+
+  def saveButton
+    navigationItem.leftBarButtonItem
   end
 
   def cancelButtonDidGetTouched cancelButton
-    delegate.childViewControllerDidFinish self
+    delegate.childViewControllerDidCancel self
   end
 end

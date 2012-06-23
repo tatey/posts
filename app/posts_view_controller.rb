@@ -7,7 +7,7 @@ class PostsViewController < UITableViewController
     0
   end
 
-  def childViewControllerDidFinish childViewController
+  def childViewControllerDidCancel childViewController
     dismissViewControllerAnimated true, completion:nil
   end
 end
