@@ -26,7 +26,7 @@ class NewPostViewController < UITableViewController
   end
 
   def buildPost
-    Post.new.tap do |post|
+    PostModel.new.tap do |post|
       post.body  = bodyTextField.text
       post.title = titleTextField.text
     end
