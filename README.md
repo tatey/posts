@@ -1,6 +1,9 @@
 # Posts
 
-An example RubyMotion app using Storyboarding.
+An example RubyMotion app using Storyboarding. This code was apart of my talk on "Building
+a small iOS app with RubyMotion" at the 25 June Brisbane Ruby and Rails Brigade meetup.
+
+[Slides available](https://speakerdeck.com/u/tatey/p/building-a-small-ios-app-with-rubymotion).
 
 ## Usage
 
