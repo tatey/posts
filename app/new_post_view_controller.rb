@@ -25,7 +25,7 @@ class NewPostViewController < UITableViewController
     view.viewWithTag 1
   end
 
-  def post
+  def buildPost
     Post.new.tap do |post|
       post.body  = bodyTextField.text
       post.title = titleTextField.text
@@ -37,6 +37,6 @@ class NewPostViewController < UITableViewController
   end
 
   def saveButtonDidGetTouched saveButton
-    delegate.childViewController self, didSaveWithPost:post
+    delegate.childViewController self, didSaveWithPost:buildPost
   end
 end
