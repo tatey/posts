@@ -40,7 +40,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="Ent-v8-4l1" kind="push" id="aAt-qn-SA3"/>
+                                    <segue destination="Ent-v8-4l1" kind="push" identifier="Show" id="aAt-qn-SA3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -48,7 +48,7 @@
                     <navigationItem key="navigationItem" title="Posts" id="yhJ-iz-wVf">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="W6W-RG-yvH">
                             <connections>
-                                <segue destination="Dvl-My-7Ke" kind="modal" id="w3P-4l-JJ6"/>
+                                <segue destination="Dvl-My-7Ke" kind="modal" identifier="New" id="w3P-4l-JJ6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

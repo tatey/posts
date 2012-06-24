@@ -4,11 +4,7 @@ class PostsViewController < UITableViewController
   end
 
   def prepareForSegue segue, sender:sender
-    if segue.destinationViewController.respond_to? :topViewController
-      segue.destinationViewController.topViewController.delegate = self
-    elsif segue.destinationViewController.respond_to? :post=
-      segue.destinationViewController.post = sender.post
-    end
+    send "#{segue.identifier.downcase}Segue:sender:", segue, sender
   end
 
   def tableView tableView, numberOfRowsInSection:section
@@ -34,5 +30,15 @@ class PostsViewController < UITableViewController
                                      withRowAnimation:UITableViewRowAnimationTop
     tableView.endUpdates
     dismissViewControllerAnimated true, completion:nil
+  end
+
+protected
+
+  def showSegue segue, sender:sender
+    segue.destinationViewController.post = sender.post
+  end
+
+  def newSegue segue, sender:sender
+    segue.destinationViewController.topViewController.delegate = self
   end
 end
