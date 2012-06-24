@@ -28,14 +28,11 @@ class PostsViewController < UITableViewController
   end
 
   def childViewController childViewController, didSaveWithPost:post
-    posts << post
-    row = posts.size - 1
-    indexPath = NSIndexPath.indexPathForRow row, inSection:0
-
+    posts.unshift post
     tableView.beginUpdates
-    tableView.insertRowsAtIndexPaths [indexPath], withRowAnimation:UITableViewRowAnimationLeft
+    tableView.insertRowsAtIndexPaths [NSIndexPath.indexPathForRow(0, inSection:0)],
+                                     withRowAnimation:UITableViewRowAnimationTop
     tableView.endUpdates
-
     dismissViewControllerAnimated true, completion:nil
   end
 end
