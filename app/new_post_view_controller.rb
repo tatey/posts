@@ -10,11 +10,11 @@ class NewPostViewController < UITableViewController
   end
 
   def cancelButton
-    navigationItem.rightBarButtonItem
+    navigationItem.leftBarButtonItem
   end
 
   def saveButton
-    navigationItem.leftBarButtonItem
+    navigationItem.rightBarButtonItem
   end
 
   def bodyTextField

@@ -135,9 +135,10 @@
                             </tableViewSection>
                         </sections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="New Post" id="1S4-em-7VC">
-                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="cCi-Qg-x9M"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="Jsx-7x-bJW"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Jsx-7x-bJW"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="cCi-Qg-x9M"/>
                     </navigationItem>
                 </tableViewController>
             </objects>
