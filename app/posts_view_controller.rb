@@ -16,11 +16,10 @@ class PostsViewController < UITableViewController
   end
 
   def tableView tableView, cellForRowAtIndexPath:indexPath
-    post = posts[indexPath.row]
-    cell = tableView.dequeueReusableCellWithIdentifier 'PostCell'
+    post      = posts[indexPath.row]
+    cell      = tableView.dequeueReusableCellWithIdentifier 'PostCell'
     cell.post = post
-    cell.textLabel.text = post.title
-    cell.detailTextLabel.text = post.body
+    cell.configure!
     cell
   end
 
